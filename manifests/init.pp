@@ -4,5 +4,5 @@
 # Note you do not have to declare the nssm class if you 
 # already have nssm installed
 class nssm {
-  include windows::nssm
+  # include windows::nssm
 }
