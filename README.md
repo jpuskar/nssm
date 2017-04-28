@@ -11,6 +11,14 @@ This module contains a couple of defined types:
 - `nssm::install`  install a service
 - `nssm::set`  set the parameters for that service
 
+#### Changelog
+1.0.3
+- Changed execs to use the heredoc format for readability.
+- Added options to manage the following NSSM service properties:
+  - AppStdout
+  - AppStderr
+- Fixed idempotency when using quotes or escaped characters.
+
 #### Installing NSSM
 
 This will obviously require NSSM to be installed.  If you need to install nssm, you may optionally declare the nssm class:

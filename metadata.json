@@ -1,15 +1,13 @@
 {
-  "name": "ktreese-nssm",
-  "version": "1.0.2",
+  "name": "jpuskar-nssm",
+  "version": "1.0.3",
   "author": "Kris Reese",
   "summary": "Manages nssm with Puppet",
   "license": "Apache-2.0",
-  "source": "https://github.com/ktreese/nssm",
-  "project_page": "https://github.com/ktreese/nssm",
-  "issues_url": "https://github.com/ktreese/nssm/issues",
-  "dependencies": [
-    {"name":"counsyl/windows","version_requirement":">= 1.0.2"}
-  ],
+  "source": "https://github.com/jpuskar/nssm",
+  "project_page": "https://github.com/jpuskar/nssm",
+  "issues_url": "https://github.com/jpuskar/nssm/issues",
+  "dependencies": [ ],
   "operatingsystem_support": [
     {"operatingsystem": "Windows"}
   ]
