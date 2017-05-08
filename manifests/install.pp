@@ -42,7 +42,7 @@ define nssm::install (
        If($install_proc.exitcode -ne 0) {Throw;}
     }
     | END_FRAG_INSTALL_CMD
-  $install_cmd = "$nssm_cmd_params $frag_install_cmd"
+  $install_cmd = "${nssm_cmd_params} ${frag_install_cmd}"
 
   $frag_check_service = @(END_FRAG_CHECK_SERVICE)
     $sp_arglist = "get " + $service_name + " Name";
@@ -50,7 +50,7 @@ define nssm::install (
     $check_proc = Start-Process "nssm" @sp_parms -Wait -PassThru;
     If($check_proc.exitcode -eq 0) {Exit 0;} Else {Exit 1;}
     | END_FRAG_CHECK_SERVICE
-  $check_service = "$nssm_cmd_params $frag_check_service"
+  $check_service = "${nssm_cmd_params} ${frag_check_service}"
 
   $frag_remove_cmd = @(END_FRAG_REMOVE_CMD)
      If ((Test-Path $program) -eq $false) {
@@ -62,7 +62,7 @@ define nssm::install (
        If($install_proc.exitcode -ne 0) {Throw;}
     }
     | END_FRAG_REMOVE_CMD
-  $remove_cmd = "$nssm_cmd_params $frag_remove_cmd"
+  $remove_cmd = "${nssm_cmd_params} ${frag_remove_cmd}"
 
   if $ensure == present {
     exec { "install_nssm_service_${service_name}":

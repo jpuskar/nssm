@@ -12,6 +12,9 @@ This module contains a couple of defined types:
 - `nssm::set`  set the parameters for that service
 
 #### Changelog
+1.0.4
+- Lint fixes.
+
 1.0.3
 - Changed execs to use the heredoc format for readability.
 - Added options to manage the following NSSM service properties:
